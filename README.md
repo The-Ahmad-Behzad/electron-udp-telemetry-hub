@@ -1,6 +1,6 @@
 # Enterprise IoT Telemetry Gateway & Control Dashboard
 
-![IoT Telemetry Gateway Dashboard](./dashboard-screenshot.png)
+![IoT Telemetry Gateway Dashboard](./dashboard-screenshot.jpeg)
 An Electron desktop application that ingests high-frequency UDP telemetry from
 simulated IoT devices, visualizes it live (Recharts), and dispatches
 bidirectional UDP control commands back to devices — all through a
