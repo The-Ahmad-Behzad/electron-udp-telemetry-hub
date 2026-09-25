@@ -19,6 +19,8 @@ integrity monitoring, CSV audit export) rather than a toy demo.
 
 *(If video doesn't play, see the [architecture image](./images/udp-gateway-architecture.jfif))*
 
+*(For screen readers or text-based processing, a plain-text version is available in [ARCHITECTURE.md](./ARCHITECTURE.md))*
+
 ### The three engineering problems this project solves
 
 **1. GC pressure from high-frequency packet parsing** (`shared/packetSchema.js`)
