@@ -15,7 +15,11 @@ integrity monitoring, CSV audit export) rather than a toy demo.
 
 ## Architecture
 
-![Architecture](./images/udp-gateway-architecture.gif)
+![Architecture (Animated)](./images/udp-gateway-architecture.gif)
+
+*Static architecture diagram with full details:*
+
+![Architecture (Static)](./images/udp-gateway-architecture.jfif)
 
 *(For screen readers or text-based processing, a plain-text version is available in [ARCHITECTURE.md](./ARCHITECTURE.md))*
 
