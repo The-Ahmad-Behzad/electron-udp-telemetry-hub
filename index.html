@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: https://cdn.tailwindcss.com; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IoT Telemetry Gateway &amp; Control Dashboard</title>
+    <!-- Tailwind via play-CDN: keeps the build simple for this portfolio project.
+         Swap for a compiled Tailwind (PostCSS) pipeline for production use. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: 'class' };
+    </script>
+    <style>
+      body { background-color: #0b0f14; }
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-thumb { background: #2a3542; border-radius: 4px; }
+    </style>
+  </head>
+  <body class="text-slate-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
