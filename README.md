@@ -1,6 +1,6 @@
 # Enterprise IoT Telemetry Gateway & Control Dashboard
 
-![IoT Telemetry Gateway Dashboard](./dashboard-screenshot.jpeg)
+![IoT Telemetry Gateway Dashboard](./images/dashboard-screenshot.jpeg)
 An Electron desktop application that ingests high-frequency UDP telemetry from
 simulated IoT devices, visualizes it live (Recharts), and dispatches
 bidirectional UDP control commands back to devices — all through a
@@ -15,20 +15,9 @@ integrity monitoring, CSV audit export) rather than a toy demo.
 
 ## Architecture
 
-```
- 3x simulated devices          Electron MAIN process            Electron RENDERER (React)
- (udp_simulator.js)                                              via contextBridge
-┌──────────────────┐   UDP    ┌───────────────────────────┐  IPC  ┌───────────────────────┐
-│ dgram client      │ ───────▶│ dgram server (dynamic port)│──────▶│ App.jsx                │
-│ binary packets    │ 10Hz/dev│  - decode + validate       │batch  │  - buffered in refs     │
-│ every 100ms       │         │  - per-device ring buffers │every  │  - committed to state   │
-│ + anomalies       │         │  - throughput accounting   │100ms  │    every 500ms          │
-└──────────────────┘         │  - batches pending packets  │       │  - DeviceCard charts    │
-        ▲                    │                             │       │  - NetworkHealthPanel   │
-        │ UDP command        │  UDP client (control)       │◀──────│  - ControlPanel (send)  │
-        └────────────────────│  ipcMain.handle('control:*')│invoke │  - LogsPanel (CSV export)│
-                              └───────────────────────────┘       └───────────────────────┘
-```
+<video src="./images/udp-gateway-architecture.mp4" autoplay loop muted playsinline></video>
+
+*(If video doesn't play, see the [architecture image](./images/udp-gateway-architecture.jfif))*
 
 ### The three engineering problems this project solves
 
