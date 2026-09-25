@@ -15,9 +15,7 @@ integrity monitoring, CSV audit export) rather than a toy demo.
 
 ## Architecture
 
-<video src="./images/udp-gateway-architecture.mp4" autoplay loop muted playsinline></video>
-
-*(If video doesn't play, see the [architecture image](./images/udp-gateway-architecture.jfif))*
+![Architecture](./images/udp-gateway-architecture.gif)
 
 *(For screen readers or text-based processing, a plain-text version is available in [ARCHITECTURE.md](./ARCHITECTURE.md))*
 
